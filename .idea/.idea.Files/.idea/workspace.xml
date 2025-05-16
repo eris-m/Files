@@ -7,7 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="" />
+    <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Files/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Files/.idea/avalonia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Files/App.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Models/Explorer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Models/Explorer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Options.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Options.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +29,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///mnt/drive3/proj/Files/Files/Controls/FilesView.axaml" root0="SKIP_HIGHLIGHTING" />
@@ -42,9 +49,11 @@
   "keyToString": {
     ".NET Project.Files.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Publish to folder.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "HiddenFiles",
+    "last_opened_file_path": "/mnt/drive3/proj/Files/Files/publish/linux",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,11 +63,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Publish to folder.Unnamed">
+    <configuration name="Unnamed" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="linux-x64" self_contained="true" target_folder="$PROJECT_DIR$/Files/publish/linux" target_framework="net9.0" uuid_high="-715923754275025434" uuid_low="-8250953564669624469" />
+      <method v="2" />
+    </configuration>
     <configuration name="Files" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Files/bin/Debug/net9.0/Files" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Files/bin/Debug/net9.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
@@ -73,11 +86,15 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net9.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.Files" />
+      <item itemvalue="Publish to folder.Unnamed" />
+    </list>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -102,7 +119,7 @@
       <workItem from="1747359733784" duration="1313000" />
       <workItem from="1747374426426" duration="538000" />
       <workItem from="1747383068024" duration="4514000" />
-      <workItem from="1747390048621" duration="3582000" />
+      <workItem from="1747390048621" duration="5884000" />
     </task>
     <task id="LOCAL-00001" summary="Extracted file view into it's own file.">
       <option name="closed" value="true" />
@@ -168,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747394085096</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added Options.cs">
+      <option name="closed" value="true" />
+      <created>1747394145674</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747394145674</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

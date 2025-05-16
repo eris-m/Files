@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Files/App.axaml" value="Files/Files.csproj" />
         <entry key="Files/Controls/CurrentDirectory.axaml" value="Files/Files.csproj" />
         <entry key="Files/Controls/FilesView.axaml" value="Files/Files.csproj" />
         <entry key="Files/Views/MainWindow.axaml" value="Files/Files.csproj" />

@@ -14,7 +14,7 @@ public class Options
     /// <summary>
     /// Whether to show hidden files or not.
     /// </summary>
-    public bool ShowHidden { get; set; } = false;
+    public bool ShowHidden { get; set; } = true;
     
     public static Options Instance
     {
