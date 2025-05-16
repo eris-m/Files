@@ -3,7 +3,7 @@
         xmlns:vm="using:Files.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:cs="clr-namespace:System"
+        xmlns:cc="clr-namespace:Files.Controls"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Files.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -16,21 +16,6 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <ItemsControl ItemsSource="{Binding Items}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <UniformGrid Columns="{Binding Columns}" />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate DataType="vm:DirectoryItemViewModel">
-                <StackPanel>
-                    <Button Command="{Binding Command}">
-                        <Label Content="{Binding Name}" />
-                    </Button>
-                </StackPanel>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+    <cc:FilesView />
 
 </Window>

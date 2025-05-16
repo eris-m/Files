@@ -11,6 +11,9 @@ namespace Files.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
+ 
+    [ObservableProperty]
+    private ObservableCollection<DirectoryItemViewModel> _items = [];
     private Explorer _explorer;
 
     public MainWindowViewModel()
@@ -19,10 +22,7 @@ public partial class MainWindowViewModel : ViewModelBase
         RefreshItems();
     }
 
-    [ObservableProperty]
-    ObservableCollection<DirectoryItemViewModel> _items = [];
     public int Columns { get; set; } = 10;
-
 
     private void SelectItem(DirectoryItem item)
     {
