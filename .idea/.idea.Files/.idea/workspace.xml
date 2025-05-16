@@ -8,11 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Files/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Files/.idea/avalonia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Files/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/Models/Explorer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Models/Explorer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/Options.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Options.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/ViewModels/MainWindowViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Views/MainWindow.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Publish to folder.Unnamed">
+  <component name="RunManager" selected=".NET Project.Files">
     <configuration name="Unnamed" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="linux-x64" self_contained="true" target_folder="$PROJECT_DIR$/Files/publish/linux" target_framework="net9.0" uuid_high="-715923754275025434" uuid_low="-8250953564669624469" />
       <method v="2" />
@@ -119,7 +117,7 @@
       <workItem from="1747359733784" duration="1313000" />
       <workItem from="1747374426426" duration="538000" />
       <workItem from="1747383068024" duration="4514000" />
-      <workItem from="1747390048621" duration="5884000" />
+      <workItem from="1747390048621" duration="6629000" />
     </task>
     <task id="LOCAL-00001" summary="Extracted file view into it's own file.">
       <option name="closed" value="true" />
@@ -193,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747394145674</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added hiding files.">
+      <option name="closed" value="true" />
+      <created>1747408373009</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747408373009</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +214,8 @@
     <MESSAGE value="Added CurrentDirectory.axaml and UI changes." />
     <MESSAGE value="Added up arrow" />
     <MESSAGE value="Added Options.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Options.cs" />
+    <MESSAGE value="Added hiding files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added hiding files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
