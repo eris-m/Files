@@ -5,6 +5,13 @@ using System.Linq;
 
 namespace Files.Models;
 
+public enum NavigationDirection
+{
+    Forward,
+    Back,
+    Up
+};
+
 public enum DirectoryItemKind
 {
     Directory,
@@ -33,7 +40,7 @@ public class Explorer(string directory)
         CurrentDirectory = Path.Combine(CurrentDirectory, path);
     }
 
-    public void UpDirectory()
+    public void Navigate(NavigationDirection direction)
     {
         History.Add(CurrentDirectory);
         CurrentDirectory = Path.GetDirectoryName(CurrentDirectory) ?? CurrentDirectory;
@@ -41,17 +48,25 @@ public class Explorer(string directory)
 
     public IEnumerable<DirectoryItem> EnumerateItems()
     {
-        var directories = Directory
-            .EnumerateDirectories(CurrentDirectory)
-            .StripHidden()
-            .Select(CreateFolderItem);
-    
-        var files = Directory
-            .EnumerateFiles(CurrentDirectory)
-            .StripHidden()
-            .Select(CreateFileItem);
-    
-        return directories.Concat(files);
+        try
+        {
+            var directories = Directory
+                .EnumerateDirectories(CurrentDirectory)
+                .StripHidden()
+                .Select(CreateFolderItem);
+
+            var files = Directory
+                .EnumerateFiles(CurrentDirectory)
+                .StripHidden()
+                .Select(CreateFileItem);
+
+            return directories.Concat(files);
+        } 
+        catch (DirectoryNotFoundException ex)
+        {
+            //TODO!
+            return [];
+        }
     }
     
     private static DirectoryItem CreateFolderItem(string fullPath)

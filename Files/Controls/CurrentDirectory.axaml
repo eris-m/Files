@@ -2,12 +2,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:mm="clr-namespace:Files.Models"
              xmlns:vm="clr-namespace:Files.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Files.Controls.CurrentDirectory"
              x:DataType="vm:MainWindowViewModel">
     <StackPanel Orientation="Horizontal">
-        <Button Command="{Binding UpDirectoryCommand}">↑</Button>
+		<Button Command="{Binding NavigateCommand}" CommandParameter="{x:Static mm:NavigationDirection.Back}">←</Button>
+		<Button Command="{Binding NavigateCommand}" CommandParameter="{x:Static mm:NavigationDirection.Forward}">→</Button>
+        <Button Command="{Binding NavigateCommand}" CommandParameter="{x:Static mm:NavigationDirection.Up}">↑</Button>
         <TextBox Text="{Binding CurrentDirectory}" />
     </StackPanel>
 </UserControl>
