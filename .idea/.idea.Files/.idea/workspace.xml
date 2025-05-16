@@ -9,8 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/ViewModels/MainWindowViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Views/MainWindow.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Models/Explorer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Models/Explorer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1747359733784" duration="1313000" />
       <workItem from="1747374426426" duration="538000" />
       <workItem from="1747383068024" duration="4514000" />
-      <workItem from="1747390048621" duration="6629000" />
+      <workItem from="1747390048621" duration="7052000" />
     </task>
     <task id="LOCAL-00001" summary="Extracted file view into it's own file.">
       <option name="closed" value="true" />
@@ -199,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747408373009</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added keybind to unhide files.">
+      <option name="closed" value="true" />
+      <created>1747409190501</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747409190501</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +222,8 @@
     <MESSAGE value="Added up arrow" />
     <MESSAGE value="Added Options.cs" />
     <MESSAGE value="Added hiding files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added hiding files." />
+    <MESSAGE value="Added keybind to unhide files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added keybind to unhide files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -73,6 +73,6 @@ file static class StripExtension
         if (!Options.Instance.ShowHidden)
             return elements;
 
-        return elements.Where(s => Path.GetFileName(s)[0] != '.');
+        return elements.Where(s => (File.GetAttributes(s) & FileAttributes.Hidden) == 0);
     }
 }
