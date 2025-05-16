@@ -25,13 +25,17 @@ public class Explorer(string directory)
 
     public string CurrentDirectory { get; set; } = directory;
 
+    public HistoryBuffer History { get; } = new HistoryBuffer();
+    
     public void EnterSubdirectory(string path)
     {
+        History.Add(CurrentDirectory);
         CurrentDirectory = Path.Combine(CurrentDirectory, path);
     }
 
     public void UpDirectory()
     {
+        History.Add(CurrentDirectory);
         CurrentDirectory = Path.GetDirectoryName(CurrentDirectory) ?? CurrentDirectory;
     }
 
