@@ -39,10 +39,12 @@ public class Explorer(string directory)
     {
         var directories = Directory
             .EnumerateDirectories(CurrentDirectory)
+            .StripHidden()
             .Select(CreateFolderItem);
     
         var files = Directory
             .EnumerateFiles(CurrentDirectory)
+            .StripHidden()
             .Select(CreateFileItem);
     
         return directories.Concat(files);
@@ -58,5 +60,19 @@ public class Explorer(string directory)
     {
         var name = Path.GetFileName(fullPath);
         return new DirectoryItem(name, DirectoryItemKind.File); 
+    }
+}
+
+file static class StripExtension 
+{
+     /// <summary>
+    /// Strips hidden files and folders if `Options.ShowHidden` is true.
+    /// </summary>
+    public static IEnumerable<string> StripHidden(this IEnumerable<string> elements)
+    {
+        if (!Options.Instance.ShowHidden)
+            return elements;
+
+        return elements.Where(s => (File.GetAttributes(s) & FileAttributes.Hidden) == 0);
     }
 }
