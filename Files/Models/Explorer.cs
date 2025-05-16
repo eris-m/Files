@@ -25,25 +25,29 @@ public class Explorer(string directory)
 
     public string CurrentDirectory { get; set; } = directory;
 
-    public IEnumerable<DirectoryItem> EnumerateItems()
-    {
-        var directories = Directory
-            .EnumerateDirectories(CurrentDirectory)
-            .Select(CreateFolderItem);
-
-        var files = Directory
-            .EnumerateFiles(CurrentDirectory)
-            .Select(CreateFileItem);
-
-        return directories.Concat(files);
-    }
-
     public void EnterSubdirectory(string path)
     {
         CurrentDirectory = Path.Combine(CurrentDirectory, path);
     }
 
+    public void UpDirectory()
+    {
+        CurrentDirectory = Path.GetDirectoryName(CurrentDirectory) ?? CurrentDirectory;
+    }
 
+    public IEnumerable<DirectoryItem> EnumerateItems()
+    {
+        var directories = Directory
+            .EnumerateDirectories(CurrentDirectory)
+            .Select(CreateFolderItem);
+    
+        var files = Directory
+            .EnumerateFiles(CurrentDirectory)
+            .Select(CreateFileItem);
+    
+        return directories.Concat(files);
+    }
+    
     private static DirectoryItem CreateFolderItem(string fullPath)
     {
         var name = Path.GetFileName(fullPath);

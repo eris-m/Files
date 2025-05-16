@@ -47,6 +47,14 @@ public partial class MainWindowViewModel : ViewModelBase
         // TODO: file opening
     }
 
+    [RelayCommand]
+    private void UpDirectory()
+    {
+        _explorer.UpDirectory();
+        OnPropertyChanged(nameof(CurrentDirectory));
+        RefreshItems();
+    }
+
     public void RefreshItems()
     {
         // Items.Clear();
