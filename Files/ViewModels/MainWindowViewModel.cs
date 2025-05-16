@@ -33,16 +33,7 @@ public partial class MainWindowViewModel : ViewModelBase
             RefreshItems();
         }
     }
-    
-    [RelayCommand]
-    private void ToggleHidden()
-    {
-        var options = Options.Instance;
-        options.ShowHidden = !options.ShowHidden;
-        
-        RefreshItems();
-    }
-    
+
     private void SelectItem(DirectoryItem item)
     {
         if (item.Kind == DirectoryItemKind.Directory)
