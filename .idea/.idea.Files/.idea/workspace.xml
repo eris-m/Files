@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Files/Options.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +102,7 @@
       <workItem from="1747359733784" duration="1313000" />
       <workItem from="1747374426426" duration="538000" />
       <workItem from="1747383068024" duration="4514000" />
-      <workItem from="1747390048621" duration="3501000" />
+      <workItem from="1747390048621" duration="3582000" />
     </task>
     <task id="LOCAL-00001" summary="Extracted file view into it's own file.">
       <option name="closed" value="true" />
@@ -147,7 +144,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747391555113</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Options.cs">
+      <option name="closed" value="true" />
+      <created>1747394063342</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747394063342</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added Options.cs">
+      <option name="closed" value="true" />
+      <created>1747394078776</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747394078776</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added Options.cs">
+      <option name="closed" value="true" />
+      <created>1747394085096</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747394085096</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +182,8 @@
     <MESSAGE value="Extracted file view into its own file." />
     <MESSAGE value="Added CurrentDirectory.axaml and UI changes." />
     <MESSAGE value="Added up arrow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added up arrow" />
+    <MESSAGE value="Added Options.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Options.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

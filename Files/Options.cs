@@ -12,7 +12,7 @@ public class Options
     }
 
     /// <summary>
-    /// Whether or not to show hidden files or not.
+    /// Whether to show hidden files or not.
     /// </summary>
     public bool ShowHidden { get; set; } = false;
     
