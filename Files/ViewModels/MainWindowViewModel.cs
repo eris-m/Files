@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.IO;
+using System.Globalization;
 using System.Linq;
+using Avalonia.Data.Converters;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Files.Models;
-using Microsoft.VisualBasic.FileIO;
 
 namespace Files.ViewModels;
 
@@ -56,17 +55,23 @@ public partial class MainWindowViewModel : ViewModelBase
         // TODO: file opening
     }
 
+    //[RelayCommand]
+    //private void UpDirectory()
+    //{
+    //    Navigate(NavigationDirection.Up);
+    //}
+
     [RelayCommand]
-    private void UpDirectory()
+    private void Navigate(NavigationDirection direction)
     {
-        _explorer.UpDirectory();
-        OnPropertyChanged(nameof(CurrentDirectory));
+        _explorer.Navigate(direction);
         RefreshItems();
     }
 
     public void RefreshItems()
     {
         // Items.Clear();
+        OnPropertyChanged(nameof(CurrentDirectory));
         Items = new(_explorer.EnumerateItems().Select(CreateItemVM));
     }
 
