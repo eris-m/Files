@@ -21,7 +21,7 @@ public sealed class HistoryBuffer(int size)
 
     public void Add(string path)
     {
-        if (_index == _buffer.Length)
+        if (_index == _buffer.Length - 1)
         {
             ShiftAll();
         }
@@ -30,17 +30,22 @@ public sealed class HistoryBuffer(int size)
             ClearRest();
         }
 
-            _buffer[_index] = path;
+        if (_buffer[_index] == path)
+        {
+            return;
+        }
+
+        _buffer[_index] = path;
         _index = int.Min(_index + 1, _buffer.Length - 1);
     }
 
     public string? GetBack()
     {
-        if (IsEmpty)
+        if (_index < 2)
             return null;
-
-        var item = _buffer[--_index];
-        _index = int.Max(_index, 0);
+        
+        var item = _buffer[_index - 2];
+        _index = int.Max(_index - 1, 1);
 
         return item;
     }
@@ -49,7 +54,7 @@ public sealed class HistoryBuffer(int size)
     {
         if (_index < _buffer.Length - 1)
         {
-            return _buffer[_index];
+            return _buffer[_index++];
         }
 
         return null;

@@ -62,10 +62,11 @@ public class Explorer
                 break;
             case NavigationDirection.Forward:
                 var forward = History.GetForward();
-                CurrentDirectory = forward ?? CurrentDirectory;
+                _currentDirectory = forward ?? CurrentDirectory;
                 break;
             case NavigationDirection.Back:
-                CurrentDirectory = History.GetBack() ?? CurrentDirectory;
+                var back = History.GetBack();
+                _currentDirectory = back ?? CurrentDirectory;
                 break;
         }
 
