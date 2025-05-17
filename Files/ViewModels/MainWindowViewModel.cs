@@ -86,13 +86,13 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         // Items.Clear();
         OnPropertyChanged(nameof(CurrentDirectory));
-        Items = new(_explorer.EnumerateItems().Select(CreateItemVM));
+        Items = new(_explorer.EnumerateItems().Select(ItemViewModelFactory));
     }
 
     /// <summary>
     /// Factory method to create a <c>DirectoryItemViewModel</c>.
     /// </summary>
-    private DirectoryItemViewModel CreateItemVM(DirectoryItem item)
+    private DirectoryItemViewModel ItemViewModelFactory(DirectoryItem item)
     {
         var command = new RelayCommand(() => SelectItem(item));
         return new DirectoryItemViewModel(item, command);

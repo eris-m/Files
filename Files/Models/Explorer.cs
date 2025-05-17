@@ -128,12 +128,12 @@ public class Explorer
             var directories = Directory
                 .EnumerateDirectories(CurrentDirectory)
                 .StripHidden()
-                .Select(CreateFolderItem);
+                .Select(FolderItemFactory);
 
             var files = Directory
                 .EnumerateFiles(CurrentDirectory)
                 .StripHidden()
-                .Select(CreateFileItem);
+                .Select(FileItemFactory);
 
             return directories.Concat(files);
         } 
@@ -148,7 +148,7 @@ public class Explorer
     /// Factory to create a folder item.
     /// </summary>
     /// <param name="fullPath">The full path of the item.</param>
-    private static DirectoryItem CreateFolderItem(string fullPath)
+    private static DirectoryItem FolderItemFactory(string fullPath)
     {
         var name = Path.GetFileName(fullPath);
         return new DirectoryItem(name, DirectoryItemKind.Directory);
@@ -158,7 +158,7 @@ public class Explorer
     /// Factory to create a file item.
     /// </summary>
     /// <param name="fullPath">The full path of the item.</param>
-    private static DirectoryItem CreateFileItem(string fullPath)
+    private static DirectoryItem FileItemFactory(string fullPath)
     {
         var name = Path.GetFileName(fullPath);
         return new DirectoryItem(name, DirectoryItemKind.File); 
