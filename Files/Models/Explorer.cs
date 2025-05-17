@@ -83,7 +83,7 @@ public class Explorer
     /// <summary>
     /// The history of paths visited.
     /// </summary>
-    public HistoryBuffer History { get; } = new HistoryBuffer();
+    public History History { get; } = new History();
    
     /// <summary>
     /// Enter a subdirectory of the current directory.

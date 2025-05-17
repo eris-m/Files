@@ -3,14 +3,14 @@ using System.Collections.Generic;
 namespace Files.Models;
 
 // Maybe implement ICollection or similar
-public sealed class HistoryBuffer(int size)
+public sealed class History(int size)
 {
     public const int DefaultSize = 8;
 
     private string?[] _buffer = new string[size];
     private int _index = 0;
 
-    public HistoryBuffer() : this(DefaultSize)
+    public History() : this(DefaultSize)
     {
     }
 
