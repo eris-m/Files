@@ -7,9 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="">
+    <list default="true" id="66203522-458c-443e-b0bb-2df2e0458cb1" name="Changes" comment="Deleted rider file">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Files/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Files/Models/Explorer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Models/Explorer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Models/HistoryBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Models/HistoryBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Files/Views/MainWindow.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,7 +51,7 @@
     "Publish to folder.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "HiddenFiles",
+    "git-widget-placeholder": "history",
     "last_opened_file_path": "/mnt/drive3/proj/Files/Files/publish/linux",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

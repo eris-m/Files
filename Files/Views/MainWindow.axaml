@@ -27,17 +27,6 @@
         <ScrollViewer>
             <cc:FilesView />
         </ScrollViewer>
-        <!-- -->
-        <!-- <StackPanel DockPanel.Dock="Right"> -->
-        <!--     <Label FontWeight="Bold">History: </Label> -->
-        <!--     <ItemsControl ItemsSource="{Binding History}"> -->
-        <!--         <ItemsControl.ItemTemplate> -->
-        <!--             <DataTemplate DataType="x:String"> -->
-        <!--                 <Label Content="{Binding  RelativeSource={RelativeSource Mode=DataContext}}" /> -->
-        <!--             </DataTemplate> -->
-        <!--         </ItemsControl.ItemTemplate> -->
-        <!--     </ItemsControl> -->
-        <!-- </StackPanel> -->
     </DockPanel>
 
 </Window>

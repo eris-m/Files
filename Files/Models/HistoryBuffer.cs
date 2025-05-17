@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace Files.Models;
@@ -14,10 +13,6 @@ public sealed class HistoryBuffer(int size)
     public HistoryBuffer() : this(DefaultSize)
     {
     }
-
-    public bool IsEmpty => _index == 0;
-
-    public IList<string?> Items => _buffer;
 
     public void Add(string path)
     {

@@ -68,6 +68,7 @@ public class Explorer
                 var back = History.GetBack();
                 _currentDirectory = back ?? CurrentDirectory;
                 break;
+            default: break;
         }
 
     }
