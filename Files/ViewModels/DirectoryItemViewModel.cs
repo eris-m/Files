@@ -4,20 +4,32 @@ using Files.Models;
 
 namespace Files.ViewModels;
 
-public class DirectoryItemViewModel(DirectoryItem item, ICommand? command = null) : ViewModelBase
+/// <summary>
+/// View model for a directory item (folder or file).
+/// </summary>
+/// <param name="item">The directory item to wrap.</param>
+/// <param name="selectedCommand">Command to perform when the item is selected.</param>
+public class DirectoryItemViewModel(DirectoryItem item, ICommand? selectedCommand = null) : ViewModelBase
 {
-    private DirectoryItem _item = item;
-
+    /// <summary>
+    /// Command to perform when the item is selected.
+    /// </summary>
+    public ICommand? SelectedCommand { get; private set; } = selectedCommand;
+    
+    /// <summary>
+    /// The name of the item.
+    /// </summary>
     public string Name
     {
-        get => _item.Name;
-        set => SetProperty(_item.Name, value, _item, (item, s) => item.Name = s);
+        get => item.Name;
+        set => SetProperty(item.Name, value, item, (i, s) => i.Name = s);
     }
 
-    public ICommand? Command { get; private set; } = command;
-
+    /// <summary>
+    /// The kind of item. If it is a folder or file.
+    /// </summary>
     public DirectoryItemKind Kind
     {
-        get => _item.Kind;
+        get => item.Kind;
     }
 }

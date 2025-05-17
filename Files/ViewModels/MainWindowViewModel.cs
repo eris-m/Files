@@ -55,7 +55,7 @@ public partial class MainWindowViewModel : ViewModelBase
    
     /// <summary>
     /// Selects a file in the file viewer.
-    /// Bound to <c>DirectoryItemViewModel.Command</c>
+    /// Bound to <c>DirectoryItemViewModel.SelectedCommand</c>
     /// </summary>
     /// <param name="item">Item to select.</param>
     private void SelectItem(DirectoryItem item)
@@ -72,7 +72,7 @@ public partial class MainWindowViewModel : ViewModelBase
     }
 
     /// <summary>
-    /// Command to navigate the file structure.
+    /// SelectedCommand to navigate the file structure.
     /// </summary>
     /// <param name="direction">Which "direction" to navigate.</param>
     [RelayCommand]

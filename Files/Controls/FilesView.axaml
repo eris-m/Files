@@ -27,7 +27,7 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate DataType="vm:DirectoryItemViewModel">
-                    <Button Classes="Item" Command="{Binding Command}">
+                    <Button Classes="Item" Command="{Binding SelectedCommand}">
                         <Label Classes="Item" Content="{Binding Name}" />
                     </Button>
                 </DataTemplate>
