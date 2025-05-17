@@ -9,13 +9,18 @@ using Files.Models;
 
 namespace Files.ViewModels;
 
+/// <summary>
+/// Main view model.
+/// </summary>
 public partial class MainWindowViewModel : ViewModelBase
 {
     [ObservableProperty]
     private ObservableCollection<DirectoryItemViewModel> _items = [];
+    
     [ObservableProperty]
-    private int _columns = 10;
-    private Explorer _explorer;
+    private int _gridColumns = 10;
+    
+    private readonly Explorer _explorer;
 
     public MainWindowViewModel()
     {
@@ -23,6 +28,9 @@ public partial class MainWindowViewModel : ViewModelBase
         RefreshItems();
     }
 
+    /// <summary>
+    /// The current directory as a path.
+    /// </summary>
     public string CurrentDirectory
     {
         get => _explorer.CurrentDirectory;
@@ -32,7 +40,10 @@ public partial class MainWindowViewModel : ViewModelBase
             RefreshItems();
         }
     }
-    
+   
+    /// <summary>
+    /// Toggles hidden files on and off.
+    /// </summary>
     [RelayCommand]
     private void ToggleHidden()
     {
@@ -41,7 +52,12 @@ public partial class MainWindowViewModel : ViewModelBase
         
         RefreshItems();
     }
-    
+   
+    /// <summary>
+    /// Selects a file in the file viewer.
+    /// Bound to <c>DirectoryItemViewModel.Command</c>
+    /// </summary>
+    /// <param name="item">Item to select.</param>
     private void SelectItem(DirectoryItem item)
     {
         if (item.Kind == DirectoryItemKind.Directory)
@@ -55,12 +71,10 @@ public partial class MainWindowViewModel : ViewModelBase
         // TODO: file opening
     }
 
-    //[RelayCommand]
-    //private void UpDirectory()
-    //{
-    //    Navigate(NavigationDirection.Up);
-    //}
-
+    /// <summary>
+    /// Command to navigate the file structure.
+    /// </summary>
+    /// <param name="direction">Which "direction" to navigate.</param>
     [RelayCommand]
     private void Navigate(NavigationDirection direction)
     {
@@ -68,13 +82,16 @@ public partial class MainWindowViewModel : ViewModelBase
         RefreshItems();
     }
 
-    public void RefreshItems()
+    private void RefreshItems()
     {
         // Items.Clear();
         OnPropertyChanged(nameof(CurrentDirectory));
         Items = new(_explorer.EnumerateItems().Select(CreateItemVM));
     }
 
+    /// <summary>
+    /// Factory method to create a <c>DirectoryItemViewModel</c>.
+    /// </summary>
     private DirectoryItemViewModel CreateItemVM(DirectoryItem item)
     {
         var command = new RelayCommand(() => SelectItem(item));

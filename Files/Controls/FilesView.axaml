@@ -22,7 +22,7 @@
     <ItemsControl ItemsSource="{Binding Items}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="{Binding Columns}" Classes="Container" />
+                    <UniformGrid Columns="{Binding GridColumns}" Classes="Container" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
