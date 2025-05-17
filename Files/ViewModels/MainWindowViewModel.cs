@@ -71,6 +71,7 @@ public partial class MainWindowViewModel : ViewModelBase
     public void RefreshItems()
     {
         // Items.Clear();
+        OnPropertyChanged(nameof(CurrentDirectory));
         Items = new(_explorer.EnumerateItems().Select(CreateItemVM));
     }
 

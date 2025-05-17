@@ -24,26 +24,51 @@ public class DirectoryItem(string name, DirectoryItemKind kind)
     public DirectoryItemKind Kind { get; set; } = kind;
 }
 
-public class Explorer(string directory)
+public class Explorer
 {
+    private string _currentDirectory = "";
+
+    public Explorer(string directory)
+    {
+        CurrentDirectory = directory;
+    }
+
     public Explorer() : this(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))
     {
     }
 
-    public string CurrentDirectory { get; set; } = directory;
+    public string CurrentDirectory {
+        get => _currentDirectory;
+        set
+        {
+            _currentDirectory = value;
+            History.Add(_currentDirectory);
+        }
+    }
 
     public HistoryBuffer History { get; } = new HistoryBuffer();
     
     public void EnterSubdirectory(string path)
     {
-        History.Add(CurrentDirectory);
         CurrentDirectory = Path.Combine(CurrentDirectory, path);
     }
 
     public void Navigate(NavigationDirection direction)
     {
-        History.Add(CurrentDirectory);
-        CurrentDirectory = Path.GetDirectoryName(CurrentDirectory) ?? CurrentDirectory;
+        switch (direction)
+        {
+            case NavigationDirection.Up:
+                CurrentDirectory = Path.GetDirectoryName(CurrentDirectory) ?? CurrentDirectory;
+                break;
+            case NavigationDirection.Forward:
+                var forward = History.GetForward();
+                CurrentDirectory = forward ?? CurrentDirectory;
+                break;
+            case NavigationDirection.Back:
+                CurrentDirectory = History.GetBack() ?? CurrentDirectory;
+                break;
+        }
+
     }
 
     public IEnumerable<DirectoryItem> EnumerateItems()
